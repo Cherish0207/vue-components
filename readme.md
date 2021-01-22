@@ -1,0 +1,1 @@
+[Vue组件间通信方式](http://www.zhufengpeixun.cn/train/vue-info/component.html#%E4%B8%80-props%E4%BC%A0%E9%80%92%E6%95%B0%E6%8D%AE) 学习笔记
