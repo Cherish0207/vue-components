@@ -1,7 +1,7 @@
 <template>
   <div>
     父组件:{{ mny }}
-    <Son1 :mny="mny" @input="change"></Son1>
+    <Son1 :mny.sync="mny"></Son1>
   </div>
 </template>
 <script>
