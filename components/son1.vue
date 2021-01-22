@@ -1,14 +1,15 @@
 <template>
   <div>
-    子组件1: {{ mny }}
-    <!-- 触发的事件名 update:(绑定.sync属性的名字) -->
-    <button @click="$emit('update:mny', 220)">更改</button>
+    子组件1: {{ value }}
+    <!-- 触发的事件只能是input -->
+    <button @click="$emit('input', 20)">更改</button>
   </div>
 </template>
 <script>
 export default {
   props: {
-    mny: {
+    value: {
+      // 接收到的属性名只能叫value
       type: Number,
     },
   },

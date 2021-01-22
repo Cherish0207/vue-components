@@ -1,7 +1,7 @@
 <template>
   <div>
     父组件:{{ mny }}
-    <Son1 :mny.sync="mny"></Son1>
+    <Son1 v-model="mny"></Son1>
   </div>
 </template>
 <script>
