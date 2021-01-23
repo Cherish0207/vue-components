@@ -3,7 +3,7 @@
     子组件1: {{ value }}
     <!-- 触发的事件只能是input -->
     <button @click="$emit('input', 20)">更改</button>
-    <Grandson1 :value="value"></Grandson1>
+    <Grandson1 :value="value" @mnyChange="mnyChange"></Grandson1>
   </div>
 </template>
 <script>
@@ -18,5 +18,10 @@ export default {
       type: Number,
     },
   },
+  methods: {
+    mnyChange() {
+      console.log('mnyChange');
+    }
+  }
 };
 </script>

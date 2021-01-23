@@ -11,6 +11,17 @@ Vue.prototype.$dispatch = function $dispatch(eventName, data) {
     parent = parent.$parent;
   }
 };
+Vue.prototype.$broadcast = function $broadcast(eventName, data) {
+  const broadcast = function () {
+    this.$children.forEach((child) => {
+      child.$emit(eventName, data);
+      if (child.$children) {
+        $broadcast.call(child, eventName, data);
+      }
+    });
+  };
+  broadcast.call(this, eventName, data);
+};
 export default {
   name: 'App',
   components: {
