@@ -1,9 +1,12 @@
 <template>
-  <div>子组件: <Son1 name="小珠峰" age="10"></Son1></div>
+  <Son1></Son1>
 </template>
 <script>
 import Son1 from "./Son1";
 export default {
+  provide() {
+    return { parentMsg: "父亲" };
+  },
   components: {
     Son1,
   },
