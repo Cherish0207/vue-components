@@ -2,7 +2,7 @@
   <div>
     孙子:{{ value }}
     <!-- 调用父组件的input事件 -->
-    <button @click="$parent.$emit('input', 200)">更改</button>
+    <button @click="$dispatch('input', 200)">Grandson1-更改</button>
   </div>
 </template>
 <script>
